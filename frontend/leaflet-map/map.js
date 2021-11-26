@@ -155,3 +155,21 @@ map.on('click', function onMapClickMarker(e) {
   var dow = document.getElementById("dayOfWeek").value;
   info.update({value: dow, fix: e.latlng});
 });
+
+
+///////////////////////////////////////////////////
+// Adding routing capbility
+L.Routing.control({
+  waypoints: [
+    L.latLng(DefaultLocation),
+    L.latLng(DefaultLocation)
+  ]
+}).on('routeselected', function(e) {
+  var instructions = e.route.instructions;
+  var inst_text = "";
+  instructions.forEach(element => {
+    inst_text += ` - ${element.road}`;    
+  });
+  alert('Showing route between waypoints:\n' + inst_text);
+})
+.addTo(map);
