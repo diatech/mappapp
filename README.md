@@ -15,6 +15,13 @@ The purpose of this web application is to provide a lay-of-the-land for the user
 1. The user wants to examine the traffic for all days of the week.
 1. The user can select another day from a "day-picker" and examine the hourly traffic.
 
+### Use Case #3
+
+1. The user right click the map and choose "route from here". The App drops a marker(Blue)
+1. The user right click the map and choose "route to here". The App drops a marker(Red) and perform the routing between A & B.
+1. Gathter the route and perform the "traffic" analysis on the route and draw the lines in different colors
+1. Resources: [Open Routing Service](https://openrouteservice.org/dev/#/api-docs) & [Context Menu](https://github.com/aratcliffe/Leaflet.contextmenu)
+
 ## Detailed Design
 
 ### Front End
